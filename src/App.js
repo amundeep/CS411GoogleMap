@@ -126,10 +126,6 @@ export class MapContainer extends Component {
           icon = {{url: 'http://amundeep.com/img/risk' + data[1].risk + '.jpg'}} >
         </Marker>
 
-        <InfoWindow
-          marker = {this.activeMarker}
-          content = {data[this.activeMarker.id].name}
-        />
 
       </Map>
     );
@@ -145,7 +141,6 @@ export class MapContainer extends Component {
   onMarkerClick(props, marker, e) {
     console.log("Marker clicked: " + marker.name);
     //GO TO THE RESTAURANT PAGE HERE
-    this.activeMarker = marker;
 
   }
 
